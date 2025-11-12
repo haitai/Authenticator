@@ -12,7 +12,7 @@ export default defineAppConfig({
     },
     card: {
       slots: {
-        root: "w-full max-w-xs overflow-hidden",
+        root: "w-full overflow-hidden",
         body: "!py-3 px-3 md:px-5 xl:px-8",
       },
     },

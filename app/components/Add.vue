@@ -21,27 +21,44 @@ const openQrscan = async () => {
 </script>
 
 <template>
-  <UModal :ui="{ content: 'p-2' }">
+  <UDrawer side="bottom" :close="true" :ui="{ width: 'w-full', content: 'p-4 pb-8 rounded-t-3xl' }">
     <template #content>
-      <UButton
-        icon="i-heroicons-qr-code-solid"
-        color="primary"
-        variant="ghost"
-        block
-        class="gap-x-3 p-3 px-6"
-        @click="openQrscan"
-        >Scan QR Code</UButton
-      >
-      <hr class="my-2 border-t border-(--ui-primary)/30" />
-      <UButton
-        color="primary"
-        class="gap-x-3 p-3 px-6"
-        variant="ghost"
-        icon="i-heroicons-key-solid"
-        @click="openForm"
-        block
-        >Enter Setup Key</UButton
-      >
+      <div class="space-y-4">
+        <div class="flex items-center justify-between gap-x-3">
+          <UButton
+            color="neutral"
+            variant="soft"
+            class="rounded-full text-base px-6 h-12"
+            @click="openQrscan"
+            >扫描二维码</UButton
+          >
+          <UButton
+            color="primary"
+            variant="solid"
+            class="rounded-full h-14 w-14"
+            @click="openQrscan"
+          >
+            <UIcon name="i-heroicons-camera-20-solid" class="h-6 w-6" />
+          </UButton>
+        </div>
+        <div class="flex items-center justify-between gap-x-3">
+          <UButton
+            color="neutral"
+            variant="soft"
+            class="rounded-full text-base px-6 h-12"
+            @click="openForm"
+            >输入设置密钥</UButton
+          >
+          <UButton
+            color="primary"
+            variant="solid"
+            class="rounded-full h-14 w-14"
+            @click="openForm"
+          >
+            <UIcon name="i-heroicons-computer-desktop-16-solid" class="h-6 w-6" />
+          </UButton>
+        </div>
+      </div>
     </template>
-  </UModal>
+  </UDrawer>
 </template>

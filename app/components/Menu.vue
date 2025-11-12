@@ -18,51 +18,53 @@ const logout = async () => {
 </script>
 
 <template>
-  <UModal title="Menu" :close="false">
-    <template #body>
-      <UButton
-        leading-icon="i-solar-palette-round-bold"
-        trailing-icon="i-mingcute-right-line"
-        color="primary"
-        variant="ghost"
-        block
-        class="p-3 px-6 gap-x-5"
-        @click="themePickerModal.open()"
-        >Theme & Style</UButton
-      >
-      <USeparator />
-      <UButton
-        leading-icon="i-carbon-fingerprint-recognition"
-        trailing-icon="i-mingcute-right-line"
-        color="primary"
-        variant="ghost"
-        block
-        class="p-3 px-6 gap-x-5"
-        @click="passkeysModal.open()"
-        >Passkeys</UButton
-      >
-      <USeparator />
-      <UButton
-        leading-icon="i-tabler:restore"
-        trailing-icon="i-mingcute-right-line"
-        variant="ghost"
-        color="primary"
-        block
-        class="p-3 px-6 gap-x-5"
-        @click="backupAndRestoreModal.open()"
-      >
-        Backup & Restore
-      </UButton>
-      <USeparator />
-      <UButton
-        leading-icon="i-solar-logout-outline"
-        color="primary"
-        variant="ghost"
-        block
-        class="p-3 px-6 gap-x-3 mt-3"
-        @click="logout"
-        >Logout</UButton
-      >
+  <UDrawer side="left" :ui="{ width: 'w-72' }" :close="false">
+    <template #content>
+      <div class="p-2">
+        <UButton
+          leading-icon="i-solar-palette-round-bold"
+          trailing-icon="i-mingcute-right-line"
+          color="primary"
+          variant="ghost"
+          block
+          class="p-3 px-6 gap-x-5"
+          @click="themePickerModal.open()"
+          >Theme & Style</UButton
+        >
+        <USeparator />
+        <UButton
+          leading-icon="i-carbon-fingerprint-recognition"
+          trailing-icon="i-mingcute-right-line"
+          color="primary"
+          variant="ghost"
+          block
+          class="p-3 px-6 gap-x-5"
+          @click="passkeysModal.open()"
+          >Passkeys</UButton
+        >
+        <USeparator />
+        <UButton
+          leading-icon="i-tabler:restore"
+          trailing-icon="i-mingcute-right-line"
+          variant="ghost"
+          color="primary"
+          block
+          class="p-3 px-6 gap-x-5"
+          @click="backupAndRestoreModal.open()"
+        >
+          Backup & Restore
+        </UButton>
+        <USeparator />
+        <UButton
+          leading-icon="i-solar-logout-outline"
+          color="primary"
+          variant="ghost"
+          block
+          class="p-3 px-6 gap-x-3 mt-3"
+          @click="logout"
+          >Logout</UButton
+        >
+      </div>
     </template>
-  </UModal>
+  </UDrawer>
 </template>

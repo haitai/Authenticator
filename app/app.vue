@@ -33,7 +33,7 @@ useHead({
       tagPriority: -2,
     },
   ],
-  title: "MyAuthenticator",
+  title: "Authenticator",
   htmlAttrs: {
     lang: "en",
   },
